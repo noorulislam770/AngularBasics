@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
-
+import {Component} from '@angular/core';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector :'app-root',
+  templateUrl:'./app.component.html',
+  styleUrls:['./app.component.css']
 })
-export class AppComponent {
-  title = 'basics';
+export class AppComponent{
+  name = 'noor'
+  imgUrl = 'https://picsum.photos/id/237/500/500'
+  getName(){
+    return this.name.toUpperCase()
+  }
+
+  changeImage(e:KeyboardEvent){
+    this.imgUrl = (e.target as HTMLInputElement).value;
+  }
+
+
 }
